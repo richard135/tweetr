@@ -31,19 +31,43 @@
       <span class="header">Tweeter</span>
     </nav>
 
+    <!-- Nav css -->
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+
+    <!-- Existing-tweets css -->
+    <link rel="stylesheet" href="/styles/existing-tweet.css" type="text/css" />
 
     <!-- Page-specific (main) content here -->
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
     <main class="container">
       <section class="new-tweet">
-        <h2>Compose Tweet</h2>
+        <h2 class="compose">Compose Tweet</h2>
         <form method="POST" action="/tweets">
           <textarea name="text" class='text' placeholder="What are you humming about?"></textarea>
           <input type="submit" value="Tweet">
           <span class="counter">140</span>
         </form>
       </section>
+
+      <section class="existing-tweet">
+        <article>
+          <header>
+            <span class= "name"> Bill Fields</span>
+             <img class="profilepic" src="/images/smile.jpg">
+            <span class="username"> @MrFields </span>
+          </header>
+
+          <p>Testing </p>
+        <footer>
+        10 days ago
+        <img class="footer_logo" src="/images/flag.png">
+        <img class="footer_logo" src="/images/loop.png">
+        <img class="footer_logo" src="/images/heart.png">
+        </footer>
+        </article>
+      </section>
+
+
     </main>
 
   </body>

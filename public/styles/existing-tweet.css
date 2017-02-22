@@ -1,0 +1,112 @@
+.existing-tweet .profilepic {
+  height: 50px;
+  width: 50px;
+  float:left;
+  padding: 5px;
+  filter: brightness(90%);
+}
+
+.existing-tweet:hover .profilepic {
+  height: 50px;
+  width: 50px;
+  float:left;
+  padding: 5px;
+  filter: brightness(100%);
+}
+
+.existing-tweet {
+  background-color: white;
+  border-radius: 10px;
+  margin: 2em;
+  border: 1px solid ;
+  border-color:#EEE
+}
+
+.existing-tweet:hover {
+  background-color: white;
+  border-radius: 10px;
+  margin: 2em;
+  border: 1px solid ;
+  border-color: black;
+}
+
+
+.existing-tweet header{
+  background:#EEE;
+  padding: 2px;
+  width: 100%;
+  font-size:25px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  height: 60px;
+  color:#8f9698;
+  font-family: 'Roboto Condensed Bold', sans-serif;
+}
+
+
+.existing-tweet footer{
+  border-top: 1px solid;
+  padding:8px;
+  width:100%;
+  border-color:#EEE;
+  font-size: 10px;
+  color:#8f9698;
+}
+
+.existing-tweet footer .footer_logo{
+  height: 15px;
+  width: 15px;
+  float: right;
+  padding: 1 px;
+  margin-right: 5px;
+  display:none;
+}
+
+.existing-tweet:hover footer .footer_logo{
+  height: 15px;
+  width: 15px;
+  float: right;
+  padding: 1 px;
+  margin-right: 5px;
+  display:block;
+}
+
+.existing-tweet .username{
+  float:right;
+  font-size: 12px;
+  padding: 5px;
+  color: #8f9698;
+}
+
+
+
+.existing-tweet:hover .username{
+  float:right;
+  font-size: 12px;
+  padding: 5px;
+  color:black;
+}
+
+.existing-tweet .name{
+  font-size: 20px;
+  font-style: bold;
+  color: #8f9698;
+}
+
+.existing-tweet:hover .name{
+ font-size: 20px;
+  font-style: bold;
+  color: #8f9698;
+  color: black;
+}
+
+.existing-tweet p{
+  padding: 5px;
+  font-size: 15px;
+  color:#8f9698;
+}
+
+
+
+
+
