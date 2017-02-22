@@ -62,6 +62,12 @@ var data = [
       console.log(tweet);
     }
   }
+  function getDate(postDate) {
+    let now = new Date();
+    let dif = now - postDate;
+    let day = Math.floor(dif/ (1000 * 60 * 60 * 24));
+    return day;
+  }
 
   function createTweetElement (data) {
     const $tweet = $("<article>").addClass("tweet");
@@ -72,16 +78,20 @@ var data = [
     $header.append($name, $profilepic, $username);
 
     const $paragraph = $("<p>").text(data.content.text);
+
     $tweet.append($paragraph);
 
     const $flag = $("<img>").addClass("footer_logo").attr("src", "/images/flag.png");
     const $loop = $("<img>").addClass("footer_logo").attr("src", "/images/loop.png");
     const $heart = $("<img>").addClass("footer_logo").attr("src", "/images/heart.png");
-    const $footer = $("<footer>").text(data.created_at);
+    const $date = getDate(data.created_at);
+    const $footer = $("<footer>").text($date+" days ago");
     $footer.append($flag, $loop, $heart);
     $tweet.append($footer);
     return $tweet
   }
+
+
   renderTweets(data);
 
 });
