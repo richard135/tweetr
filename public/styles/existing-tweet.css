@@ -14,7 +14,7 @@
   filter: brightness(100%);
 }
 
-.existing-tweet {
+.existing-tweet article{
   background-color: white;
   border-radius: 10px;
   margin: 2em;
@@ -22,7 +22,7 @@
   border-color:#EEE
 }
 
-.existing-tweet:hover {
+.existing-tweet article:hover{
   background-color: white;
   border-radius: 10px;
   margin: 2em;
@@ -62,7 +62,7 @@
   display:none;
 }
 
-.existing-tweet:hover footer .footer_logo{
+.existing-tweet article:hover footer .footer_logo{
   height: 15px;
   width: 15px;
   float: right;
