@@ -5,61 +5,11 @@
  */
 
 $(document).ready( function() {
-
-// Test / driver code (temporary). Eventually will get this from the server.
-var data = [
-  {
-    "user": {
-      "name": "Newton",
-      "avatars": {
-        "small":   "https://vanillicon.com/788e533873e80d2002fa14e1412b4188_50.png",
-        "regular": "https://vanillicon.com/788e533873e80d2002fa14e1412b4188.png",
-        "large":   "https://vanillicon.com/788e533873e80d2002fa14e1412b4188_200.png"
-      },
-      "handle": "@SirIsaac"
-    },
-    "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
-    },
-    "created_at": 1461116232227
-  },
-  {
-    "user": {
-      "name": "Descartes",
-      "avatars": {
-        "small":   "https://vanillicon.com/7b89b0d8280b93e2ba68841436c0bebc_50.png",
-        "regular": "https://vanillicon.com/7b89b0d8280b93e2ba68841436c0bebc.png",
-        "large":   "https://vanillicon.com/7b89b0d8280b93e2ba68841436c0bebc_200.png"
-      },
-      "handle": "@rd" },
-    "content": {
-      "text": "Je pense , donc je suis"
-    },
-    "created_at": 1461113959088
-  },
-  {
-    "user": {
-      "name": "Johann von Goethe",
-      "avatars": {
-        "small":   "https://vanillicon.com/d55cf8e18b47d4baaf60c006a0de39e1_50.png",
-        "regular": "https://vanillicon.com/d55cf8e18b47d4baaf60c006a0de39e1.png",
-        "large":   "https://vanillicon.com/d55cf8e18b47d4baaf60c006a0de39e1_200.png"
-      },
-      "handle": "@johann49"
-    },
-    "content": {
-      "text": "Es ist nichts schrecklicher als eine tätige Unwissenheit."
-    },
-    "created_at": 1461113796368
-  }
-];
-
-
   function renderTweets (tweets){
     for (let tweet of tweets){
       let $input = createTweetElement(tweet);
-      $('.existing-tweet').append($input);
-      console.log(tweet);
+      $('.existing-tweet').prepend($input);
+      // console.log(tweet);
     }
   }
   function getDate(postDate) {
@@ -67,6 +17,10 @@ var data = [
     let dif = now - postDate;
     let day = Math.floor(dif/ (1000 * 60 * 60 * 24));
     return day;
+  }
+
+  function organizeTweets(){
+
   }
 
   function createTweetElement (data) {
@@ -91,8 +45,47 @@ var data = [
     return $tweet
   }
 
+  //form is the target, submit is the selector
+  $('.new-tweet form').on('submit', function (event){
+    event.preventDefault();
+    var $text = $(this).find('textarea').serialize();
+    console.log($text.length);
+    if ($text.length - 5 === 0) {
+      return alert("Please write something!")
+    } else if ($text.length > 145 ){
+      return alert("Too many characters!")
+    } else {
+      $.ajax({
+        url: '/tweets',
+        method: 'POST',
+        data: $text
+      }).then(function (data) {
+        $('.new-tweet form').find('textarea').val('');
+        $('.new-tweet form').find('.counter').text('140');
+        //slides form in after posting
+        $('.container .new-tweet').slideToggle();
+        loadTweets()
+      })
+    }
+  })
 
-  renderTweets(data);
+  function loadTweets(){
+    $.ajax({
+      url:'/tweets',
+      method:'GET',
+    }).then(function(data){
+      console.log("This is data", data);
+      $('.existing-tweet').empty();
+      renderTweets(data);
+    })
+  }
+  loadTweets()
+
+  $('#nav-bar .compose').on('click', function(event){
+    $('.container .new-tweet').slideToggle();
+    $('.container textarea').focus();
+  })
+
 
 });
 

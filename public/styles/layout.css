@@ -25,7 +25,17 @@ p {
   font-size: 30px;
 }
 
+.container {
+  width: 450px;
+  background:white;
+  margin:auto;
+  padding-top:140px;
+  padding-bottom:140px;
+}
 
+.container .new-tweet{
+  display:none;
+}
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions

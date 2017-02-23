@@ -6,7 +6,7 @@
   filter: brightness(90%);
 }
 
-.existing-tweet:hover .profilepic {
+.existing-tweet article:hover .profilepic {
   height: 50px;
   width: 50px;
   float:left;
@@ -80,7 +80,7 @@
 
 
 
-.existing-tweet:hover .username{
+.existing-tweet article:hover .username{
   float:right;
   font-size: 12px;
   padding: 5px;
@@ -93,7 +93,7 @@
   color: #8f9698;
 }
 
-.existing-tweet:hover .name{
+.existing-tweet article:hover .name{
  font-size: 20px;
   font-style: bold;
   color: #8f9698;
@@ -106,6 +106,9 @@
   color:#8f9698;
 }
 
+p{
+  word-break:break-all;
+}
 
 
 

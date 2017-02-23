@@ -6,6 +6,8 @@ $(document).ready( function() {
     console.log(textsLeft);
     if(textsLeft<0){
       $(this).closest('.new-tweet').find('.counter').css("color", "red");
+    } else {
+       $(this).closest('.new-tweet').find('.counter').css("color", "black");
     }
   });
 });
