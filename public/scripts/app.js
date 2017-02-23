@@ -65,7 +65,10 @@ $(document).ready( function() {
         //slides form in after posting
         $('.container .new-tweet').slideToggle();
         loadTweets()
-      })
+      }).catch(function (err) {
+      console.log(err);
+      alert('ERROR');
+    });
     }
   })
 
@@ -77,7 +80,10 @@ $(document).ready( function() {
       console.log("This is data", data);
       $('.existing-tweet').empty();
       renderTweets(data);
-    })
+    }).catch(function (err) {
+      console.log(err);
+      alert('ERROR');
+    });
   }
   loadTweets()
 
