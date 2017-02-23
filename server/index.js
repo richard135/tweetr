@@ -19,14 +19,6 @@ MongoClient.connect(MONGODB_URI, (err, db) => {
     throw err;
   }
 
-  // function getTweets(callback){
-  //   db.collection('tweets').find().toArray(callback)
-  // }
-  // getTweets((err,tweets) => {
-  //   if(err) throw err;{
-  //     console.log(tweets);
-  //   }
-  // })
   const DataHelpers = require("./lib/data-helpers.js")(db);
   const tweetsRoutes = require("./routes/tweets")(DataHelpers);
   app.use("/tweets", tweetsRoutes);

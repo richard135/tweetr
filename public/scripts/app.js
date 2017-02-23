@@ -49,7 +49,6 @@ $(document).ready( function() {
   $('.new-tweet form').on('submit', function (event){
     event.preventDefault();
     var $text = $(this).find('textarea').serialize();
-    console.log($text.length);
     if ($text.length - 5 === 0) {
       return alert("Please write something!")
     } else if ($text.length > 145 ){
@@ -77,6 +76,7 @@ $(document).ready( function() {
       url:'/tweets',
       method:'GET',
     }).then(function(data){
+      $('.existing-tweet').empty();
       renderTweets(data);
     }).catch(function (err) {
       console.log(err);

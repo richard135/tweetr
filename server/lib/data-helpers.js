@@ -5,13 +5,14 @@
 
 // Defines helper functions for saving and getting tweets, using the database `db`
 module.exports = function makeDataHelpers(db) {
-  function getTweets(callback) {
-    db.collection("tweets").find().toArray((err, tweets) => {
-      if (err) {
-        return callback(err);
-      }
-        callback(null, tweets);
-    });
+  return {
+
+    getTweets: function(callback) {
+      db.collection("tweets").find().toArray(callback)
+    },
+
+    saveTweet: function(newTweet, callback) {
+      db.collection("tweets").insertOne(newTweet,callback)
+    }
   }
-  return {getTweets: getTweets};
 }
