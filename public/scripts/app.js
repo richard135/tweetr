@@ -77,8 +77,6 @@ $(document).ready( function() {
       url:'/tweets',
       method:'GET',
     }).then(function(data){
-      console.log("This is data", data);
-      $('.existing-tweet').empty();
       renderTweets(data);
     }).catch(function (err) {
       console.log(err);
