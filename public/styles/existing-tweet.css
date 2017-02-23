@@ -1,118 +1,125 @@
-.existing-tweet .profilepic {
-  height: 50px;
-  width: 50px;
-  float:left;
-  padding: 5px;
-  filter: brightness(90%);
+p{
+  word-break:break-all;
 }
 
-.existing-tweet article:hover .profilepic {
-  height: 50px;
-  width: 50px;
-  float:left;
-  padding: 5px;
-  filter: brightness(100%);
-}
+
 
 .existing-tweet article{
   background-color: white;
+  border: 1px solid ;
+  border-color: #EEE;
   border-radius: 10px;
+  margin-bottom: 1em;
   margin-left: 2em;
   margin-right: 2em;
-  margin-bottom: 1em;
-  border: 1px solid ;
-  border-color:#EEE
 }
+
 
 .existing-tweet article:hover{
   background-color: white;
-  border-radius: 10px;
-  margin-left: 2em;
-  margin-right: 2em;
-  margin-bottom: 1em;
   border: 1px solid ;
   border-color: black;
+  border-radius: 10px;
+  margin-bottom: 1em;
+  margin-left: 2em;
+  margin-right: 2em;
+}
+
+.existing-tweet article:hover footer .footer_logo{
+  display: block;
+  float: right;
+  height: 15px;
+  margin-right: 5px;
+  padding: 1 px;
+  width: 15px;
+}
+
+.existing-tweet article:hover .name{
+  color: #8f9698;
+  color: black;
+  font-size: 20px;
+  font-style: bold;
 }
 
 
-.existing-tweet header{
-  background:#EEE;
-  padding: 2px;
-  width: 100%;
-  font-size:25px;
-  border-top-right-radius: 10px;
-  border-top-left-radius: 10px;
-  height: 60px;
-  color:#8f9698;
-  font-family: 'Roboto Condensed Bold', sans-serif;
+.existing-tweet article:hover .profilepic {
+  filter: brightness(100%);
+  float:left;
+  height: 50px;
+  padding: 5px;
+  width: 50px;
+}
+
+
+.existing-tweet article:hover .username{
+  color:black;
+  float:right;
+  font-size: 12px;
+  padding: 5px;
 }
 
 
 .existing-tweet footer{
-  border-top: 1px solid;
+  border-color: #EEE;
+  border-top: 1px solid #EEE;
+  color:#8f9698;
+  font-size: 10px;
   padding:8px;
   width:100%;
-  border-color:#EEE;
-  font-size: 10px;
-  color:#8f9698;
 }
 
 .existing-tweet footer .footer_logo{
-  height: 15px;
-  width: 15px;
-  float: right;
-  padding: 1 px;
-  margin-right: 5px;
   display:none;
-}
-
-.existing-tweet article:hover footer .footer_logo{
-  height: 15px;
-  width: 15px;
   float: right;
-  padding: 1 px;
+  height: 15px;
   margin-right: 5px;
-  display:block;
+  padding: 1 px;
+  width: 15px;
 }
 
-.existing-tweet .username{
-  float:right;
-  font-size: 12px;
-  padding: 5px;
-  color: #8f9698;
-}
-
-
-
-.existing-tweet article:hover .username{
-  float:right;
-  font-size: 12px;
-  padding: 5px;
-  color:black;
+.existing-tweet header{
+  background:#EEE;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  color:#8f9698;
+  font-family: 'Roboto Condensed Bold', sans-serif;
+  font-size:25px;
+  height: 60px;
+  padding: 2px;
+  width: 100%;
 }
 
 .existing-tweet .name{
+  color: #8f9698;
   font-size: 20px;
   font-style: bold;
-  color: #8f9698;
-}
-
-.existing-tweet article:hover .name{
- font-size: 20px;
-  font-style: bold;
-  color: #8f9698;
-  color: black;
 }
 
 .existing-tweet p{
-  padding: 5px;
-  font-size: 15px;
   color:#8f9698;
+  font-size: 15px;
+  padding: 1em;
 }
 
-p{
-  word-break:break-all;
+.existing-tweet .profilepic {
+  filter: brightness(90%);
+  float:left;
+  height: 50px;
+  padding: 5px;
+  width: 50px;
 }
+
+
+.existing-tweet .username{
+  color: #8f9698;
+  float:right;
+  font-size: 12px;
+  padding: 5px;
+}
+
+
+
+
 
 
 

@@ -15,10 +15,10 @@ html {
  */
 
 body {
-  margin: 0;
-  color: #244751;
   background-color: #eee;
+  color: #244751;
   font-family: 'Roboto Condensed', sans-serif;
+  margin: 0;
 }
 
 p {
@@ -26,11 +26,11 @@ p {
 }
 
 .container {
-  width: 450px;
   background:white;
   margin:auto;
-  padding-top:140px;
   padding-bottom:140px;
+  padding-top:140px;
+  width: 450px;
 }
 
 .container .new-tweet{
