@@ -15,7 +15,7 @@ $(document).ready( function() {
   function getDate(postDate) {
     let now = new Date();
     let dif = now - postDate;
-    let day = Math.floor(dif/ (1000 * 60 * 60 * 24));
+    let day = Math.floor(dif / (1000 * 60 * 60 * 24));
     return day;
   }
 
@@ -42,7 +42,7 @@ $(document).ready( function() {
     const $footer = $("<footer>").text($date+" days ago");
     $footer.append($flag, $loop, $heart);
     $tweet.append($footer);
-    return $tweet
+    return $tweet;
   }
 
   //form is the target, submit is the selector
@@ -50,9 +50,9 @@ $(document).ready( function() {
     event.preventDefault();
     var $text = $(this).find('textarea').serialize();
     if ($text.length - 5 === 0) {
-      return alert("Please write something!")
-    } else if ($text.length > 145 ){
-      return alert("Too many characters!")
+      return alert("Please write something!");
+    } else if ($text.length > 145 ) {
+      return alert("Too many characters!");
     } else {
       $.ajax({
         url: '/tweets',
