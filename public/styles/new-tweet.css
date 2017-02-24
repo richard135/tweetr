@@ -1,6 +1,7 @@
 .container .counter {
   float: right;
-  text-align: right; }
+  text-align: right;
+  margin-top: 5px; }
 .container .compose {
   border-bottom: 1px solid black;
   margin-top: 8px;
@@ -15,5 +16,10 @@
 .container textarea {
   padding: 5px;
   width: 100%; }
+.container .submit {
+  height: 35px;
+  width: 70px;
+  font-size: 25px;
+  padding:0; }
 
 /*# sourceMappingURL=new-tweet.css.map */
