@@ -37,21 +37,25 @@ $(document).ready( function() {
 
     const $flag = $("<img>").addClass("footer_logo").attr("src", "/images/flag.png");
     const $loop = $("<img>").addClass("footer_logo").attr("src", "/images/loop.png");
-    const $heart = $("<img>").addClass("footer_logo").attr("src", "/images/heart.png");
+    const $heart = $("<img>").addClass("like").attr("src", "/images/heart.png");
     const $date = getDate(data.created_at);
-    const $footer = $("<footer>").text($date+" days ago");
+    const $footer = $("<footer>").text($date + " days ago");
     $footer.append($flag, $loop, $heart);
     $tweet.append($footer);
     return $tweet;
   }
 
+
+  $('footer_logo').on('click')
+
   //form is the target, submit is the selector
   $('.new-tweet form').on('submit', function (event){
     event.preventDefault();
     var $text = $(this).find('textarea').serialize();
+    console.log($(this).find('textarea').val().length);
     if ($text.length - 5 === 0) {
-      return alert("Please write something!");
-    } else if ($text.length > 145 ) {
+      return alert("Please type something!");
+    } else if ($(this).find('textarea').val().length > 140 ) {
       return alert("Too many characters!");
     } else {
       $.ajax({

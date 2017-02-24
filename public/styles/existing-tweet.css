@@ -23,6 +23,14 @@ p {
       height: 15px;
       margin-right: 5px;
       padding: 1 px;
+      width: 15px;
+      opacity:0.3;}
+    .existing-tweet article:hover footer .like{
+      display: block;
+      float: right;
+      height: 15px;
+      margin-right: 5px;
+      padding: 1 px;
       width: 15px; }
     .existing-tweet article:hover .name {
       color: #8f9698;
@@ -48,6 +56,14 @@ p {
   padding: 8px;
   width: 100%; }
   .existing-tweet footer .footer_logo {
+    display: none;
+    float: right;
+    height: 15px;
+    margin-right: 5px;
+    padding: 1 px;
+    width: 15px;}
+
+  .existing-tweet footer .like{
     display: none;
     float: right;
     height: 15px;
