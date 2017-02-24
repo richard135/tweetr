@@ -85,9 +85,10 @@ $(document).ready( function() {
   }
   loadTweets()
 
-  $('#nav-bar .compose').on('click', function(event){
-    $('.container .new-tweet').slideToggle();
-    $('.container textarea').focus();
+  $('#nav-bar .compose').on('click', function(){
+    $('.container .new-tweet').slideToggle(function (){
+      $('.container textarea').focus();
+    })
   })
 
 
