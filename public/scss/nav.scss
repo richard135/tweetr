@@ -8,8 +8,8 @@
   position: fixed;
   right: 0;
   top: 0;
-  z-index: 1; }
-  #nav-bar .compose {
+  z-index: 1;
+  .compose {
     background-color: #E0FFFF;
     border-radius: 10px;
     border: 1px solid black;
@@ -18,8 +18,8 @@
     font-family: 'Roboto Condensed Bold', sans-serif;
     line-height: 60px;
     margin-top: 7px;
-    width: 110px; }
-    #nav-bar .compose:hover {
+    width: 110px;
+    &:hover {
       background-color: white;
       border: 1px solid black;
       border: 1px solid;
@@ -27,22 +27,26 @@
       font-family: 'Roboto Condensed Bold', sans-serif;
       line-height: 60px;
       margin-top: 7px;
-      width: 110px; }
-  #nav-bar .edit {
+      width: 110px;
+    }
+  }
+  .edit {
     float: left;
     height: 20px;
     margin-top: 20px;
     padding: 2px;
-    width: 20px; }
-  #nav-bar .header {
+    width: 20px;
+  }
+  .header {
     float: left;
     font-size: 200%;
-    line-height: 80px; }
-  #nav-bar .logo {
+    line-height: 80px;
+  }
+  .logo {
     float: left;
     height: 80px;
-    width: 80px; }
-
-/*# sourceMappingURL=nav.css.map */
+    width: 80px;
+  }
+}
 
 /*# sourceMappingURL=nav.css.map */

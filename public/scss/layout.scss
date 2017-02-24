@@ -1,0 +1,31 @@
+$font-family: 'Roboto Condensed', sans-serif;
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: #eee;
+  color: #244751;
+  margin: 0;
+}
+
+p {
+  font-size: 30px;
+}
+
+.container {
+  background:white;
+  margin:auto;
+  padding-bottom:140px;
+  padding-top:140px;
+  width: 450px;
+}
+
+.container .new-tweet{
+  display:none;
+}

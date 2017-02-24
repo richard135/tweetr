@@ -1,0 +1,101 @@
+p {
+  word-break: break-all;
+}
+
+.existing-tweet {
+  article {
+    background-color: white;
+    border: 1px solid;
+    border-color: #EEE;
+    border-radius: 10px;
+    margin-bottom: 1em;
+    margin-left: 2em;
+    margin-right: 2em;
+    &:hover {
+      background-color: white;
+      border: 1px solid;
+      border-color: black;
+      border-radius: 10px;
+      margin-bottom: 1em;
+      margin-left: 2em;
+      margin-right: 2em;
+      footer .footer_logo {
+        display: block;
+        float: right;
+        height: 15px;
+        margin-right: 5px;
+        padding: 1 px;
+        width: 15px;
+      }
+      .name {
+        color: #8f9698;
+        color: black;
+        font-size: 20px;
+        font-style: bold;
+      }
+      .profilepic {
+        filter: brightness(100%);
+        float: left;
+        height: 50px;
+        padding: 5px;
+        width: 50px;
+      }
+      .username {
+        color: black;
+        float: right;
+        font-size: 12px;
+        padding: 5px;
+      }
+    }
+  }
+  footer {
+    border-color: #EEE;
+    border-top: 1px solid #EEE;
+    color: #8f9698;
+    font-size: 10px;
+    padding: 8px;
+    width: 100%;
+    .footer_logo {
+      display: none;
+      float: right;
+      height: 15px;
+      margin-right: 5px;
+      padding: 1 px;
+      width: 15px;
+    }
+  }
+  header {
+    background: #EEE;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    color: #8f9698;
+    font-family: 'Roboto Condensed Bold', sans-serif;
+    font-size: 25px;
+    height: 60px;
+    padding: 2px;
+    width: 100%;
+  }
+  .name {
+    color: #8f9698;
+    font-size: 20px;
+    font-style: bold;
+  }
+  p {
+    color: #8f9698;
+    font-size: 15px;
+    padding: 1em;
+  }
+  .profilepic {
+    filter: brightness(90%);
+    float: left;
+    height: 50px;
+    padding: 5px;
+    width: 50px;
+  }
+  .username {
+    color: #8f9698;
+    float: right;
+    font-size: 12px;
+    padding: 5px;
+  }
+}

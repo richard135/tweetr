@@ -1,29 +1,19 @@
-.container .counter{
+.container .counter {
   float: right;
-  text-align: right;
-}
-
-.container .compose{
+  text-align: right; }
+.container .compose {
   border-bottom: 1px solid black;
   margin-top: 8px;
-  text-align: left;
-}
-
-.container .new-tweet{
-  background-color:#EEE;
+  text-align: left; }
+.container .new-tweet {
+  background-color: #EEE;
   border-radius: 10px;
   margin-bottom: 1em;
   margin-left: 2em;
   margin-right: 2em;
-  padding: 1em;
-
-
-}
-
-.container textarea{
+  padding: 1em; }
+.container textarea {
   padding: 5px;
-  width: 100%;
+  width: 100%; }
 
-}
-
-
+/*# sourceMappingURL=new-tweet.css.map */
